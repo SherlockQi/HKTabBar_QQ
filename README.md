@@ -6,30 +6,31 @@
 class HKTabBarViewController: UITabBarController {
 
 override func viewDidLoad() {
-super.viewDidLoad()
-let vc0 = UIViewController()
-vc0.view.backgroundColor = UIColor.init(red: 1, green: 0, blue: 0, alpha: 0.3)
-let vc1 = UIViewController()
-vc1.view.backgroundColor = UIColor.init(red: 0, green: 1, blue: 0, alpha: 0.3)
-let vc2 = UIViewController()
-vc2.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 1, alpha: 0.3)
-viewControllers = [vc0, vc1, vc2]
+    super.viewDidLoad()
+    ...
+    viewControllers = [vc0, vc1, vc2]
 
+    /**
+     * imageName 图片名称
+     * title 文字
+     * distance 最大的便宜距离
+     * mini_x_Coef 小图x偏移系数
+     * mini_y_Coef 小图y偏移系数
+     */
+    let item = HKTabBarModel(imageName: "recent", title: "消息", distance: 10, mini_x_Coef: 0.2, mini_y_Coef: 0.4)
+    let item1 = HKTabBarModel(imageName: "buddy", title: "联系人")
+    let item2 = HKTabBarModel(imageName: "qworld", title: "动态", distance: 10, mini_x_Coef: -0.2, mini_y_Coef: 0.2)
 
-let item = HKTabBarModel(imageName: "recent", title: "消息", distance: 10, mini_x_Coef: 0.2, mini_y_Coef: 0.4)
-let item1 = HKTabBarModel(imageName: "buddy", title: "联系人")
-let item2 = HKTabBarModel(imageName: "qworld", title: "动态", distance: 10, mini_x_Coef: -0.2, mini_y_Coef: 0.2)
+    // let tabbar = HKTabBar(items: [item, item1, item2])
+    // tabbar.hk_delegate = self
 
-//        let tabbar = HKTabBar(items: [item, item1, item2])
-//        tabbar.hk_delegate = self
+    let tabbar = HKTabBar(items: [item, item1, item2]) { (btn, index) in
+        print(btn?.title ?? "title")
+        self.selectedIndex = index
+    }
 
-let tabbar = HKTabBar(items: [item, item1, item2]) { (btn, index) in
-print(btn?.title ?? "title")
-self.selectedIndex = index
-}
-
-self.setValue(tabbar, forKey: "tabBar")
-}
+        self.setValue(tabbar, forKey: "tabBar")
+    }
 }
 
 //extension HKTabBarViewController: HKTabBarDelegate {
