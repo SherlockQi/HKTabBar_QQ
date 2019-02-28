@@ -24,7 +24,7 @@ override func viewDidLoad() {
 
     self.setValue(tabbar, forKey: "tabBar")
     }
-    }
+}
 
 //extension HKTabBarViewController: HKTabBarDelegate {
 //    func hk_tabBar(_ tabBar: HKTabBar, didSelect item: HKDragButton, index: Int) {
