@@ -24,7 +24,6 @@ class HKTabBarModel: NSObject {
      * distance 最大的便宜距离
      * mini_x_Coef 小图x偏移系数
      * mini_y_Coef 小图y偏移系数
-     *
      */
     
     init(imageName: String ,title: String, distance: CGFloat, mini_x_Coef: CGFloat , mini_y_Coef:CGFloat) {
