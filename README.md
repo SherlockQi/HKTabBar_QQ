@@ -47,7 +47,9 @@ override func viewDidLoad() {
 
 每个barItem 需要如下4张图片
 命名规则如下
+
 ![image](https://github.com/SherlockQi/HKTabBar_QQ/blob/master/Resource/image.png)
+
 ![image](https://github.com/SherlockQi/HKTabBar_QQ/blob/master/Resource/image2.png)
 
 
