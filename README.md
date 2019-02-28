@@ -1,6 +1,8 @@
 # 仿 QQ tabbar 拖动动画
 
 
+效果如下
+
 ![image](https://github.com/SherlockQi/HKNote/blob/master/HKTabBar_QQ.gif)
 
 ```swift
