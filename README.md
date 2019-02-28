@@ -1,6 +1,7 @@
 # 仿 QQ tabbar 拖动动画
 
 
+![image](https://github.com/SherlockQi/HKNote/blob/master/HKTabBar_QQ.gif)
 
 ```swift
 class HKTabBarViewController: UITabBarController {
