@@ -30,16 +30,15 @@ class HKTabBarViewController: UITabBarController {
         
         let tabbar = HKTabBar(items: [item, item1, item2]) { (btn, index) in
             print(btn?.title ?? "title")
-            
-            
             self.selectedIndex = index
         }
+        
         self.setValue(tabbar, forKey: "tabBar")
     }
 }
 
 //extension HKTabBarViewController: HKTabBarDelegate {
 //    func hk_tabBar(_ tabBar: HKTabBar, didSelect item: HKDragButton, index: Int) {
-//        self.selectedIndex = index
+//         self.selectedIndex = index
 //    }
 //}
