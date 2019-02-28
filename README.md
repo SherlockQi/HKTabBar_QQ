@@ -50,6 +50,7 @@ override func viewDidLoad() {
 
 ![image](https://github.com/SherlockQi/HKTabBar_QQ/blob/master/Resource/image.jpeg)
 
+---
 ![image](https://github.com/SherlockQi/HKTabBar_QQ/blob/master/Resource/image2.jpeg)
 
 
