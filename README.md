@@ -10,6 +10,13 @@ override func viewDidLoad() {
     ...
     viewControllers = [vc0, vc1, vc2]
 
+    /**
+     * imageName 图片名称
+     * title 文字
+     * distance 最大的便宜距离
+     * mini_x_Coef 小图x偏移系数
+     * mini_y_Coef 小图y偏移系数
+     */
     let item = HKTabBarModel(imageName: "recent", title: "消息", distance: 10, mini_x_Coef: 0.2, mini_y_Coef: 0.4)
     let item1 = HKTabBarModel(imageName: "buddy", title: "联系人")
     let item2 = HKTabBarModel(imageName: "qworld", title: "动态", distance: 10, mini_x_Coef: -0.2, mini_y_Coef: 0.2)
@@ -18,11 +25,11 @@ override func viewDidLoad() {
     // tabbar.hk_delegate = self
 
     let tabbar = HKTabBar(items: [item, item1, item2]) { (btn, index) in
-    print(btn?.title ?? "title")
-    self.selectedIndex = index
+        print(btn?.title ?? "title")
+        self.selectedIndex = index
     }
 
-    self.setValue(tabbar, forKey: "tabBar")
+        self.setValue(tabbar, forKey: "tabBar")
     }
 }
 
