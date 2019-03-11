@@ -133,17 +133,13 @@ class HKDragButton: UIButton {
     }
     
     @objc  func panGesture(_ pan: UIPanGestureRecognizer) {
-        
         var point = pan.location(in: self)
         point = CGPoint(x: point.x - bounds.size.width * 0.5, y:  point.y - bounds.size.height * 0.5)
-
         if pan.state == .began || pan.state == .changed {
             let X = point.x
             let Y = point.y
             let R = sqrt(pow(X , 2) + pow(Y , 2))
-            
             let scale = R / distance
-            
             self.dragButton_x = X / scale
             self.dragButton_y = Y / scale
             
@@ -182,3 +178,9 @@ class HKDragButton: UIButton {
     }
     
 }
+
+
+
+
+
+
